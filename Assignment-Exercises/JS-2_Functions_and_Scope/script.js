@@ -1,3 +1,32 @@
+
+// Step 1: Create Global Variables
+var globalVar = "I am a global variable";
+var anotherGlobalVar = 42;
+
+// Step 2: Create a Function to Demonstrate Function Scope
+function demoFunctionScope() {
+  var localVar = "I am a local variable";
+  console.log(globalVar);
+  console.log(anotherGlobalVar);
+  console.log(localVar);
+  return `Global: ${globalVar}, Another Global: ${anotherGlobalVar}, Local: ${localVar}`;
+}
+
+// Step 3: Call the Function and Log Its Return Value
+var result = demoFunctionScope();
+console.log(result);
+
+// Step 4: Demonstrate Block Scope
+if (true) {
+  let blockVar = "I am a block-scoped variable";
+  console.log(blockVar);
+}
+try {
+  console.log(blockVar);
+} catch (error) {
+  console.log("blockVar is not accessible outside the block");
+}
+
 /********************
  Step 1: Create Global Variables
  - Create two global variables (e.g., globalVar, anotherGlobalVar).
